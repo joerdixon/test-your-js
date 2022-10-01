@@ -22,17 +22,17 @@ var feedBack = document.getElementById("feedback");
 
 // GLOBAL VARIABLES
 
-// Tells us if the player is playing.
-var isPlaying = true;
-
-// Tells us which question we are on.
-var question = 0;
-
 // Stores the correct answer for any given question.
 var correct;
 
 // Stores the player score.
 var score = 0;
+
+// Stores the question that the player is on.
+var qNum = 0;
+
+// Initializes the timer at 60 seconds
+var secondsLeft = 60;
 
 // QUESTION SET
 var questions = [
@@ -50,35 +50,82 @@ var questions = [
 
 // Sets new question and updates answers.
 function newQuestion(questionNum) {
+    // CATCHES IF THE GAME IS OVER.
+    if (questionNum >= questions.length) {
+        secondsLeft = 0;
+        feedBack.textContent = "DONE!!! Your score was " + score;
+        return;
+    }
     currentQuestion.textContent = questions[questionNum][0];
     ansOne.textContent = questions[questionNum][1][0];
     ansTwo.textContent = questions[questionNum][1][1];
     ansThree.textContent = questions[questionNum][1][2];
     ansFour.textContent = questions[questionNum][1][3];
     correct = questions[questionNum][2];
+    nextQuestion.setAttribute("style", "display: none");
+    feedBack.textContent = "";
 }
 
 // Checks the answer based on button clicked.
 function checkAnswer(answerValue) {
-    if (answerValue == correct) {
+    if (answerValue == questions[qNum][2]) {
         score += 1;
+        feedBack.textContent = "CORRECT";
+    } else {
+        feedBack.textContent = "INCORRECT"
+        secondsLeft -= 5;
     }
+    nextQuestion.setAttribute("style", "display: block")
 }
+
+// TIMER
+function setTime() {
+  // Sets interval in variable
+  var timerInterval = setInterval(function() {
+    secondsLeft--;
+    timeRemaining.textContent = secondsLeft;
+    if(secondsLeft === 0) {
+      // Stops execution of action at set interval
+      clearInterval(timerInterval);
+      feedBack.textContent = "TIMES UP"
+      // Calls function to create and append image
+        } else if (secondsLeft === -1) {
+            timeRemaining.textContent = "";
+            clearInterval(timerInterval);
+        }
+  }, 1000);
+}
+
 
 // EVENT LISTENERS
 
 // Next Question Button
-nextQuestion.addEventListener("click",)
+nextQuestion.addEventListener("click", function() {
+    qNum += 1;
+    newQuestion(qNum);
+    console.log(ansOne);
+}
+)
 // Ans1
-ansOne.addEventListener("click",)
+ansOne.addEventListener("click", function() {
+    checkAnswer(1);
+})
 // Ans2
-ansTwo.addEventListener("click",)
+ansTwo.addEventListener("click", function() {
+    checkAnswer(2);
+})
 // Ans3
-ansThree.addEventListener("click",)
+ansThree.addEventListener("click", function() {
+    checkAnswer(3);
+})
 // Ans4
-ansFour.addEventListener("click",)
+ansFour.addEventListener("click", function() {
+    checkAnswer(4);
+})
 
-
+// call the game
+newQuestion(qNum);
+setTime();
 
 
 // question format [question as string, [ans1, ans2, ans3, ans4], ansindex]
