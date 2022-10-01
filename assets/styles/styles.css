@@ -37,7 +37,7 @@ padding-top: 1vh;
     height: 80vh;
     margin: 5vh auto;
     /* Deco */
-    background-color: antiquewhite;
+    background-color: white;
     /* Flex Settings */
     display: flex;
     justify-content: space-between;
@@ -53,7 +53,7 @@ padding-top: 1vh;
     margin: 0 auto;
     margin-top: 3vh;
     /* Deco */
-    background-color: beige;
+    background-color: white;
     /* Flex Settings */
     display: flex;
     justify-content: space-between;
@@ -68,7 +68,7 @@ padding-top: 1vh;
     width: 80%;
     margin: 0 auto;
     /* Deco */
-    background-color: aquamarine;
+    background-color: beige;
     /* Flex Settings */
     display: flex;
     flex-direction: column;
@@ -83,7 +83,7 @@ padding-top: 1vh;
     margin: 0 auto;
     text-align: center;
     /* Deco  */
-    background-color: blue;
+    background-color: white;
 }
 
 #answeroptions {
@@ -92,7 +92,7 @@ padding-top: 1vh;
     margin: 0 auto;
     text-align: left;
     /* Deco */
-    background-color: red;
+    background-color: white;
 }
 
 /* FEEDBACK SECTION (WRONG OR RIGHT) */
@@ -105,4 +105,10 @@ padding-top: 1vh;
     text-align: center;
     /* Deco */
     background-color: azure;
+}
+
+li {
+    padding: 10px;
+    background-color: black;
+    color: white;
 }

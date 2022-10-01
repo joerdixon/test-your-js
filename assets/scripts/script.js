@@ -7,8 +7,20 @@ var currentQuestion = document.getElementById("question");
 var answerOptions = document.getElementById("answeroptions");
 var feedBack = document.getElementById("feedback");
 
+// MOCK QUESTION ONE
 
+var questionOne = new question("How old am I?", "19", "1", "21", "40", "21");
 
+// MOCK QUESTION ONE - ARRAY STYLES
+
+// question format [question as string, [ans1, ans2, ans3, ans4], ansindex]
+// question[1] = question
+// question[2] = possible answers
+// question[3] = index of the correct answer within the possible answers array.
+// ie
+// question[2][question[3]] is the correct answer.
+
+console.log(questionOne);
 
 
 /* USER INPUT/OUTPUT EXPECTED:
@@ -21,13 +33,17 @@ PSEUDOCODE----------------------------------
 
 A user clicks on the link to this website
 
+        They are taken to the landing page.
+
         They are presented with a "start" button and basic information about the game and a button to view highscores.
 
-        When they click "view high scores", they will be taken to another page (or browser alert) within the website that shows them thier previous highscores saved in local storage. If they do not have any scores they will see a message informing them of this.
+        When they click "view high scores", they will be taken to another page (leaderboard.html) (or browser alert) within the website that shows them thier previous highscores saved in local storage. If they do not have any scores they will see a message informing them of this.
 
 When they click "Start":
 
-        The content of the elements will change to include a question and 4 possible answers beneath.
+        They will be taken to testyourjs.html.
+
+        This page will have a space for the current question as well as four buttons for the possible answers.
 
         The game timer will begin counting down from (60).
 
@@ -60,3 +76,18 @@ When they complete the quiz:
 
         Once they save thier highscore they will be returned to the start screen incase they want to play again.
 */
+
+/*
+CODE SNIPPETS:
+// Question Creation Function
+
+// function question(questionText, ansOne, ansTwo, ansThree, ansFour, correctAns) {
+//     this.questionText = questionText;
+//     this.ansOne = ansOne;
+//     this.ansTwo = ansTwo;
+//     this.ansThree = ansThree;
+//     this.ansFour = ansFour;
+//     this.correctAns = correctAns;
+// }
+
+*/ 
