@@ -1,0 +1,107 @@
+/* VARIABLES */
+:root {
+    /* FONTS */
+    --big-font: "lucida console";
+    /* COLORS */
+    --main-color: #333;
+    --text-color: #ddd;
+    --accent-color: pink;
+    /* SIZES */
+
+}
+
+/* STYLING */
+
+/* GENERAL STYLING */
+
+body {
+    background-color: var(--main-color);
+}
+
+/* HEADING */
+
+h1 {
+/* Deco */
+font-family: var(--big-font);
+color: white;
+/* Layout */
+text-align: center;
+padding-top: 1vh;
+}
+
+/* GAMESPACE */
+
+.gamearea {
+    /* Layout */
+    width: 80%;
+    height: 80vh;
+    margin: 5vh auto;
+    /* Deco */
+    background-color: antiquewhite;
+    /* Flex Settings */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/* GAME HEADING (High Scores and Timer) */
+
+#gameheading {
+    /* Layout */
+    height: 10%;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 3vh;
+    /* Deco */
+    background-color: beige;
+    /* Flex Settings */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* QUIZ AREA */
+
+#quizarea {
+    /* Layout */
+    height: 60%;
+    width: 80%;
+    margin: 0 auto;
+    /* Deco */
+    background-color: aquamarine;
+    /* Flex Settings */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#question {
+    /* Layout */
+    width: 80%;
+    height: 15%;
+    margin: 0 auto;
+    text-align: center;
+    /* Deco  */
+    background-color: blue;
+}
+
+#answeroptions {
+    width: 80%;
+    height: 75%;
+    margin: 0 auto;
+    text-align: left;
+    /* Deco */
+    background-color: red;
+}
+
+/* FEEDBACK SECTION (WRONG OR RIGHT) */
+
+#feedback {
+    width: 80%;
+    height: 10%;
+    margin: 0 auto;
+    margin-bottom: 3vh;
+    /* Deco */
+    background-color: azure;
+}
