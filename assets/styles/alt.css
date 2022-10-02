@@ -1,0 +1,112 @@
+/* CUSTOM STYLES FOR LANDING PAGE */
+
+#title-splash {
+    /* LAYOUT */
+    width: 75%;
+    height: auto;
+    margin: 0 auto;
+    padding: 20vh 0;
+    /* DECO */
+    font-size: 6rem;
+    /* Animation Settings */
+    animation-name: slowbounce;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+/* OPTIONS SECTION */
+
+#options {
+    /* Layout */
+    width: 65%;
+    margin: 0 auto;
+    /* margin-top: 25vh; */
+    /* Flex Settings */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#options a {
+    /* Layout */
+    width: 40%;
+    padding: 50px;
+    /* Deco */
+    background-color: purple;
+    text-align: center;
+    color: pink;
+    text-decoration: none;
+    font-family: var(--big-font);
+}
+
+/* Splash Bounce */
+
+@keyframes slowbounce {
+    0% {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(-5%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+/*-------------------------------------------------------------------------------*/
+/* CUSTOM STYLES FOR HIGH SCORE */
+
+#hs-splash {
+    padding: 10vh 0;
+}
+
+#highscores {
+    width: 35%;
+    height: 20vh;
+    margin: 0 auto;
+    background-color: pink;
+}
+
+#highscores li {
+    /* Layout */
+    width: 80%;
+    margin: 0 auto;
+    padding: 1vh;
+    /* Deco */
+    background-color: hotpink;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+#hs-options {
+    /* Layout */
+    width: 30%;
+    margin: 10vh auto;
+    /* Flex Settings */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#hs-options button {
+    width: 40%;
+    padding: 3vh;
+    /* Deco */
+    background-color: purple;
+    text-align: center;
+    color: pink;
+    text-decoration: none;
+    font-family: var(--big-font);
+    border: none
+}
+
+#hs-options a {
+    width: 40%;
+    padding: 3vh;
+    /* Deco */
+    background-color: purple;
+    text-align: center;
+    color: pink;
+    text-decoration: none;
+    font-family: var(--big-font);
+}

@@ -7,29 +7,21 @@
     <title>Test Your JS</title>
     <link rel="stylesheet" href="assets/styles/reset.css">
     <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="stylesheet" href="assets/styles/alt.css">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&display=swap" rel="stylesheet">
+    <!-- END GOOGLE FONTS -->
 </head>
 <body>
     <!-- HEADING -->
-    <h1>Test your JavaScript!</h1>
-    <!-- GAME AREA -->
-    <div class="gamearea">
-        <section id="gameheading">
-            <p id="viewhighscores">View High Scores</p>
-            <p id="timeremaining">Time: <span id="timer">0</span></p>
-        </section>
-        <section id="quizarea">
-            <p id="question">Question Goes Here</p>
-            <ul id="answeroptions">
-                <li id="ansOne"></li>
-                <li id="ansTwo"></li>
-                <li id="ansThree"></li>
-                <li id="ansFour"></li>
-            </ul>
-        </section>
-        <section id="feedback">
-            <p>Wrong or Correct Here</p>
-        </section>
-    </div>
+    <h1 id='title-splash'>Test your JavaScript!</h1>
+    <!-- OPTIONS AREA -->
+    <section id="options">
+        <a href="pages/testyourjs.html"><h2 id="play-game">Play</h2></a>
+       <a href="pages/leaderboard.html"><h2 id="show-leaderboard">High Scores</h2></a>
+    </section>
     
     <script src="./assets/scripts/script.js"></script>
 </body>

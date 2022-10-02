@@ -63,6 +63,8 @@ padding-top: 1vh;
     font-size: var(--heading-rem);
     border: 3px solid white;
     border-radius: 20px;
+    text-decoration: none;
+    color: white;
     /* Layout */
     padding: 10px;
 }
@@ -130,6 +132,7 @@ padding-top: 1vh;
     background-color: transparent;
     font-family: var(--big-font);
     font-size: var(--heading-rem);
+    color: hotpink;
     border: 3px solid white;
     border-radius: 20px;
 }
