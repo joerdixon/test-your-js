@@ -63,7 +63,7 @@
 
 #highscores {
     width: 35%;
-    height: 20vh;
+    height: auto;
     margin: 0 auto;
     background-color: pink;
 }
@@ -76,7 +76,8 @@
     /* Deco */
     background-color: hotpink;
     text-align: center;
-    border-bottom: 2px solid black;
+    border-radius: 5px;
+    border: 1px solid black;
 }
 
 #hs-options {

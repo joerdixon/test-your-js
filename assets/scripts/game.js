@@ -19,7 +19,7 @@ var feedBack = document.getElementById("feedback");
 // High Scores
 var highScores = [];
 if (localStorage.getItem("highScores") !== null) {
-    highScores = JSON.parse(localStorage.getItem(highScores));
+    highScores = JSON.parse(localStorage.getItem("highScores"));
 }
 
 // GLOBAL VARIABLES
@@ -125,9 +125,13 @@ function showEndScreen(score) {
     gameArea.appendChild(scoreSubmit);
     // Add event listener
     scoreSubmit.addEventListener("click", function() {
-        highScores.push("Name: " + scoreName.value + " ||  Score: " + score);
-        storeScores();
-    } )
+        if (scoreName.value !== null) {
+            highScores.push("Name: " + scoreName.value + " ||  Score: " + score);
+            storeScores();
+        } else {
+            scoreName.placeholder = "Please enter a name for your score."
+        }
+    })
 }
 
 function storeScores() {
@@ -166,6 +170,8 @@ ansFour.addEventListener("click", function() {
 // MAIN ----------------------------------------------------------------------------------
 
 // call the game
+console.log(localStorage.getItem("highScores"));
+console.log(highScores);
 newQuestion(qNum);
 setTime();
 
