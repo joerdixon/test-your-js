@@ -7,18 +7,30 @@
     <title>Test Your JS</title>
     <link rel="stylesheet" href="../assets/styles/reset.css">
     <link rel="stylesheet" href="../assets/styles/styles.css">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&display=swap" rel="stylesheet">
+    <!-- END GOOGLE FONTS -->
 </head>
 <body>
     <!-- HEADING -->
     <h1>Test your JavaScript!</h1>
+    <section id="gameheading">
+        <p id="viewhighscores">View High Scores</p>
+        <p id="timeremaining">Time: <span id="timer">60</span></p>
+    </section>
     <!-- GAME AREA -->
     <div class="gamearea">
-        <section id="gameheading">
-            <p id="viewhighscores">View High Scores</p>
-            <p id="timeremaining">Time: <span id="timer">60</span></p>
-        </section>
         <section id="quizarea">
-            <p id="question">Question Goes Here</p>
+            <!-- Current Questions + Feedback-->
+            <div id="questionfeed">
+                <p id="question"></p>
+                <button id='nextquestion'>Next Question</button>
+                <p id="feedback"></p>
+            </div>
+
+            <!-- List of Options -->
             <ul id="answeroptions">
                 <li id="ansOne"></li>
                 <li id="ansTwo"></li>
@@ -26,12 +38,8 @@
                 <li id="ansFour"></li>
             </ul>
         </section>
-        <button id='nextquestion'>Next Question</button>
-        <section id="feedback">
-            <p>Wrong or Correct Here</p>
-        </section>
+
     </div>
-    
     <script src="../assets/scripts/game.js"></script>
 </body>
 </html>

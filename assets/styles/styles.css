@@ -1,12 +1,20 @@
 /* VARIABLES */
 :root {
     /* FONTS */
-    --big-font: "lucida console";
+    --big-font: "Roboto Condensed";
     /* COLORS */
     --main-color: #333;
     --text-color: #ddd;
-    --accent-color: pink;
+    --accent-color: purple;
+    --bg-gradient: linear-gradient(90deg, blue, orange);
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     /* SIZES */
+    --button-size: 2rem;
+    --p-size: 1.5rem;
+    --heading-rem: 2rem;
 
 }
 
@@ -15,7 +23,8 @@
 /* GENERAL STYLING */
 
 body {
-    background-color: var(--main-color);
+    background-color: var(--bg-gradient);
+    color: white;
 }
 
 /* HEADING */
@@ -23,26 +32,14 @@ body {
 h1 {
 /* Deco */
 font-family: var(--big-font);
+font-size: 4.3rem;
 color: white;
+text-shadow: 2px 2px pink;
 /* Layout */
 text-align: center;
 padding-top: 1vh;
 }
 
-/* GAMESPACE */
-
-.gamearea {
-    /* Layout */
-    width: 80%;
-    height: 80vh;
-    margin: 5vh auto;
-    /* Deco */
-    background-color: white;
-    /* Flex Settings */
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-}
 
 /* GAME HEADING (High Scores and Timer) */
 
@@ -53,22 +50,56 @@ padding-top: 1vh;
     margin: 0 auto;
     margin-top: 3vh;
     /* Deco */
-    background-color: white;
+    background-color: transparent;
     /* Flex Settings */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+#viewhighscores {
+    /* Deco */
+    font-family: var(--big-font);
+    font-size: var(--heading-rem);
+    border: 3px solid white;
+    border-radius: 20px;
+    /* Layout */
+    padding: 10px;
+}
+
+#timeremaining {
+    /* Deco */
+    font-family: var(--big-font);
+    font-size: var(--heading-rem);
+
+}
+
+
+
 /* QUIZ AREA */
+
+/* GAMESPACE */
+
+.gamearea {
+    /* Layout */
+    width: 80%;
+    height: auto;
+    margin: 5vh auto;
+    /* Deco */
+    background-color: transparent;
+    /* Flex Settings */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
 
 #quizarea {
     /* Layout */
-    height: 60%;
+    height: 75%;
     width: 80%;
     margin: 0 auto;
     /* Deco */
-    background-color: beige;
+    background-color: transparent;
     /* Flex Settings */
     display: flex;
     flex-direction: column;
@@ -76,39 +107,94 @@ padding-top: 1vh;
     align-items: center;
 }
 
+#questionfeed {
+    /* Layout */
+    width: 100%;
+    height: auto;
+    /* Flex Settings */
+    display: flex;
+    justify-content: space-between;
+}
+
+#questionfeed p {
+    height: auto;
+}
+
 #question {
     /* Layout */
-    width: 80%;
-    height: 15%;
+    width: auto;
     margin: 0 auto;
+    padding: 3vh;
     text-align: center;
     /* Deco  */
-    background-color: white;
+    background-color: transparent;
+    font-family: var(--big-font);
+    font-size: var(--heading-rem);
+    border: 3px solid white;
+    border-radius: 20px;
 }
+
+#nextquestion {
+    width: 30%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Feedback Box */
+
+#feedback {
+    margin: 0 auto;
+    width: 25%;
+    /* height: 100%; */
+    text-align: center;
+    padding: 3vh;
+    /* Deco */
+    background-color: white;
+    border: 3px solid black;
+    color: red;
+    border-radius: 5px;
+    font-family: var(--big-font);
+    font-size: var(--button-size);
+}
+
+#feedback p {
+    height: 100%;
+}
+
+
+/* Answers */
 
 #answeroptions {
     width: 80%;
-    height: 75%;
-    margin: 0 auto;
-    text-align: left;
-    /* Deco */
-    background-color: white;
-}
-
-/* FEEDBACK SECTION (WRONG OR RIGHT) */
-
-#feedback {
-    width: 80%;
-    height: 10%;
-    margin: 0 auto;
-    margin-bottom: 3vh;
+    height: 50%;
+    margin: 4vh auto;
     text-align: center;
     /* Deco */
-    background-color: azure;
+    background-color: transparent;
+    /* Flex Settings */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-li {
-    padding: 10px;
+#answeroptions li {
+    /* Layout */
+    padding: 5vh;
+    width: 40%;
+    height: auto;
+    margin: 3vh;
+    /* Deco */
     background-color: black;
     color: white;
+    border: 1px dashed white;
+    border-radius: 10px;
+    font-family: var(--big-font);
+    font-size: var(--button-size);
 }
+
+/* NEXT QUESTION BUTTON */
+
+
+
+
