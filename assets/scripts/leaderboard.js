@@ -30,6 +30,7 @@ clearHS.addEventListener("click", function() {
     localStorage.removeItem("highScores")
     hsList.child.remove("li");
     renderScores();
+    window.location.href = "../index.html";
 })
 
 renderScores();
