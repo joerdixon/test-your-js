@@ -1,6 +1,6 @@
 # test-your-js
 
-[Test Your JavaScript]() is an interactive quiz complete with question pool and saved statistics.
+[Test Your JavaScript](https://joerdixon.github.io/test-your-js/) is an interactive quiz complete with question pool and saved statistics.
 
 ## Description
 
@@ -25,4 +25,4 @@ The Leaderboard
 
 Instalation
 
-No package required, site hosted [here]()
+No package required, site hosted [here](https://joerdixon.github.io/test-your-js/)
